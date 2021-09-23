@@ -53,7 +53,7 @@ services:
       - pingdirectory-out:/opt/out
 
   pingdataconsole:
-    image: pingidentity}/pingdataconsole:9.0.0.0-EA-alpine_3.14-al11-edge
+    image: pingidentity/pingdataconsole:9.0.0.0-EA-alpine_3.14-al11-edge
     ports:
       - "8443:8443"
     networks:
