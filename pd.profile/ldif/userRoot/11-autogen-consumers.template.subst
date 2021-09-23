@@ -1,5 +1,5 @@
 branch: ou=autogen,ou=Consumers,${USER_BASE_DN}
-subordinateTemplate: consumer:${MAKELDIF_USERS}
+subordinateTemplate: consumer:${GENERATED_CONSUMERS}
 
 template: consumer
 rdnAttr: uid
