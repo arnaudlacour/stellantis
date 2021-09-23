@@ -19,7 +19,7 @@ dsconfig delete-local-db-index \
     --backend-name userRoot \
     --index-name givenName
 
-dsconfig create-local-db-composite-index 
+dsconfig create-local-db-composite-index \
     --backend-name userRoot \
     --index-name mail \
     --set 'index-filter-pattern:(mail=*?*)' \
