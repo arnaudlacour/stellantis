@@ -2,3 +2,25 @@ dsconfig set-backend-prop \
     --backend-name userRoot \
     --set compact-common-parent-dn:ou=People,${USER_BASE_DN} \
     --set compact-common-parent-dn:ou=Consumers,${USER_BASE_DN}
+
+dsconfig delete-local-db-index \
+    --backend-name userRoot \
+    --index-name mail
+
+dsconfig delete-local-db-index \
+    --backend-name userRoot \
+    --index-name cn
+
+dsconfig delete-local-db-index \
+    --backend-name userRoot \
+    --index-name sn
+
+dsconfig delete-local-db-index \
+    --backend-name userRoot \
+    --index-name givenName
+
+dsconfig create-local-db-composite-index 
+    --backend-name userRoot \
+    --index-name mail \
+    --set 'index-filter-pattern:(mail=*?*)' \
+    --set prime-index:true

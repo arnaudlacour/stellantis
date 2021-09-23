@@ -1,4 +1,4 @@
-branch: ou=autogen,ou=Consumers,${USER_BASE_DN}
+branch: ou=Consumers,${USER_BASE_DN}
 subordinateTemplate: consumer:${GENERATED_CONSUMERS}
 
 template: consumer

@@ -39,7 +39,6 @@ services:
       - GENERATED_CONSUMERS=1000000
       - MAX_HEAP_SIZE=4g
       - USER_BASE_DN=o=stellantis.com
-      - ROOT_USER_PASSWORD_FILE=/opt/staging/.sec/root-user-password
     networks:
       - pingnet
     ulimits:
@@ -62,6 +61,15 @@ services:
       - "8443:8443"
     networks:
       - pingnet
+
+#  searchrate:
+#    image: pingidentity/ldap-sdk-tools:edge
+#    command: wait-for pingdirectory:1389 -t 600 -- searchrate --hostname pingdirectory --port 1389 --bindDN uid=admin,o=stellantis.com --bindPasswordFile /opt/staging/.sec/root-user-password --baseDN "ou=consumers,o=stellantis.com" --scope sub --filter "(&(objectClass=person)(mail=*@gmail.com*)" --numThreads 2
+#    network:
+#      - pingnet
+#    volumes:
+#      - pingdirectory-out:/opt/out
+    
 
 networks:
   pingnet:

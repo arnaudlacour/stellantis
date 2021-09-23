@@ -17,13 +17,6 @@ objectClass: top
 objectClass: organizationalUnit
 ou: People
 
-dn: ou=Consumers,${USER_BASE_DN}
-aci: (targetattr="*")(version 3.0; acl "allow self-manage"; allow(all) userdn="ldap:///self";)
-aci: (targetAttr="*")(version 3.0; acl "admin rights"; allow(all) userdn="ldap:///uid=administrator,ou=People,dc=example,dc=com";)
-objectClass: top
-objectClass: organizationalUnit
-ou: Consumers
-
 dn: ou=Groups,${USER_BASE_DN}
 aci: (targetAttr="*")(version 3.0; acl "admin rights"; allow(all) userdn="ldap:///uid=administrator,ou=People,dc=example,dc=com";)
 objectClass: top
