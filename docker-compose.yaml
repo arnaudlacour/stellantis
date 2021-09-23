@@ -39,6 +39,7 @@ services:
     environment:
       - GENERATED_CONSUMERS=1000000
       - MAX_HEAP_SIZE=4g
+      - USER_BASE_DN=o=stellantis.com
     networks:
       - pingnet
     ulimits:
