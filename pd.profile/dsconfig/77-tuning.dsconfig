@@ -3,9 +3,9 @@ dsconfig set-backend-prop \
     --set compact-common-parent-dn:ou=People,${USER_BASE_DN} \
     --set compact-common-parent-dn:ou=Consumers,${USER_BASE_DN}
 
-dsconfig delete-local-db-index \
-    --backend-name userRoot \
-    --index-name mail
+#dsconfig delete-local-db-index \
+#    --backend-name userRoot \
+#    --index-name mail
 
 dsconfig delete-local-db-index \
     --backend-name userRoot \
