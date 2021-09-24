@@ -13,6 +13,6 @@ member: uid=user.1,ou=people,${USER_BASE_DN}
 dn: cn=group.01,ou=groups,${USER_BASE_DN}
 objectClass: top
 objectClass: groupOfNames
-cn: group.0
+cn: group.01
 member: uid=user.0,ou=people,${USER_BASE_DN}
 member: uid=user.1,ou=people,${USER_BASE_DN}
